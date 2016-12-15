@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FormMailer</title>
+</head>
+<body>
+<form id="testform">
+    {% csrf_token %}
+    <input type="hidden" name="mail_subject" value="Test Message">
+    <input type="text" name="pizza_name" placeholder="name">
+    <hr>
+    <input type="checkbox" name="toppings" value="Ham"> Ham
+    <input type="checkbox" name="toppings" value="Cheese"> Cheese
+    <input type="checkbox" name="toppings" value="Tomato"> Tomato
+    <hr>
+    <input type="radio" name="temperature" value="Warm"> Hot
+    <input type="radio" name="temperature" value="Koud"> Cold
+    <hr>
+    <textarea name="message" placeholder="Message"></textarea>
+    <hr>
+    <input type="submit" value="Send">
+</form>
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="{% static 'formmailer.js' %}"></script>
+<script>
+
+    $("#testform").mailable();
+
+</script>
+</body>
+
+</html>
