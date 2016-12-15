@@ -3,7 +3,7 @@ Django formmailer is a simple and straightforward library that lets you easily g
 It consists of a client-side *Javascript* file and a *Django* app.
 
 ## jQuery plugin file: *formmailer.js*
-This file loops over all inputs a mailable form has and prepares the data to be sent in a ```HTML POST```.
+This file loops over all inputs a mailable form has and prepares the data to be sent in a ```HTTP POST```.
 
 ## Django app: *formmailer*
 The *formmailer* app exposes an endpoint which receives post data.  
